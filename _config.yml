@@ -34,12 +34,9 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : ""
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : ""
   semantic         : # URL
-  pubmed           : ""
   researchgate     : # URL
   scopus           : # URL
 
@@ -53,7 +50,6 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
