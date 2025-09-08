@@ -27,12 +27,11 @@ author:
   pronouns         : # example: "he/his"  
   bio              : |
                      M.S. in Biostatistics at University of Michigan
-                     M.A.S. in Statistical Science at Colorado State University
-                     Enthusiast in Public Health and Data Analysis
-  location         : "Earth"
-  employer         : "Red Brick University"
+                     Enthusiast in computational statistics and data science
+  location         : "Ann Arbor, MI"
+  employer         : "University of Michigan"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "yingzhen@umich.edu"  
 
   # Academic websites
   academia         : # URL
