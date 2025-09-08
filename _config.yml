@@ -22,12 +22,13 @@ repository               : "Umichyingzhen/Umichiyingzhen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "wang-yingzhen.jpg"
+  avatar           : "wang-yingzhen.png"
   name             : "Yingzhen Wang"
   pronouns         : # example: "he/his"  
   bio              : |
                      M.S. in Biostatistics at University of Michigan
-                     Enthusiast in computational statistics and data science
+                     M.A.S. in Statistical Science at Colorado State University
+                     Enthusiast in Public Health and Data Analysis
   location         : "Earth"
   employer         : "Red Brick University"
   uri              : # URL
