@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
-title                    : "Your Name / Site Title"
+title                    : "Yingzhen Wang / Site Title"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
