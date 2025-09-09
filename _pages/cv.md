@@ -49,11 +49,15 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+Research Expreience
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+
+**Differential Analysis of Normal and Tumor Cancers in the Kidney**  
+_Institute of Biophysics, Chinese Academy of Sciences_ — Beijing, China (May 2023 – Aug 2023)
+
+- Cleaned 3,000+ raw kidney cancer samples in R; found WNK4 as most significant gene  
+- Used Cytoscape + edgeR for analysis and visualization across multiple algorithms  
+- Validated findings via qPCR and immunofluorescence on mouse bone marrow mesenchymal cells
   
 Teaching
 ======
