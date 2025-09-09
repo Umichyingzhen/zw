@@ -11,7 +11,8 @@ redirect_from:
 
 Education
 ======
-* M.S. in 
+**University of Michigan – Ann Arbor**  
+*Master of Science in Biostatistics, Expected May 2026*
 * M.S. in Jekyll, GitHub University, 2014
 * B.S. in GitHub, GitHub University, 2012
 
