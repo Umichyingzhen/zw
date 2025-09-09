@@ -12,9 +12,11 @@ redirect_from:
 Education
 ======
 **University of Michigan – Ann Arbor**  
-*Master of Science in Biostatistics, Expected May 2026*
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+*Master of Science in Biostatistics | GPA: 3.860/4.0*
+**Colorado State University - Fort Collins**  
+*Master of Applied Statistics in Statistical Science | GPA: 3.904/4.0*
+**Yanbian University**  
+*Bachelor of Science in Statistics | AVG: 81.39/100*
 
 Work experience
 ======
