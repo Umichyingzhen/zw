@@ -13,8 +13,10 @@ Education
 ======
 **University of Michigan – Ann Arbor**  
 *Master of Science in Biostatistics | GPA: 3.860/4.0*
+
 **Colorado State University - Fort Collins**  
 *Master of Applied Statistics in Statistical Science | GPA: 3.904/4.0*
+
 **Yanbian University**  
 *Bachelor of Science in Statistics | AVG: 81.39/100*
 
