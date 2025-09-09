@@ -22,29 +22,26 @@ Education
 
 Relevant Coursework
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Algebra & Geometry
+* Probability & Distribution Theory
+* Ordinary Differential Equation
+* Stochastic Process
+* Multivariate Statistical Analysis
+* Machine Learning
+* Data Visualization Methods
+* Applied Bayesian Statistics
+* Quantitative Reasoning
+* Computing with Big Data
+* Analysis of Categorical Data
+* Biostatistics Inference
+* Clinical Trials
+* Theory and Application of Longitudinal Analysis
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Technical Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+**Languages:** English (Advanced), Mandarin (Native)
+
+**Software:** Excel (Advanced), Python (Advanced), R (Advanced), SQL (Intermediate), C++ (Intermediate), Linux (Intermediate), Matlab (Intermediate)
 
 Publications
 ======
