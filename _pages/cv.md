@@ -20,7 +20,7 @@ Education
 **Yanbian University**  
 *Bachelor of Science in Statistics | AVG: 81.39/100*
 
-Work experience
+Relevant Coursework
 ======
 * Spring 2024: Academic Pages Collaborator
   * GitHub University
