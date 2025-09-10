@@ -13,6 +13,7 @@ I’m passionate about computational statistics, data science, and biostatistica
 ### 🎓 Education
 - **M.S. in Biostatistics**, University of Michigan *(August 2024 - Expected May 2026)*
 - **M.A.S. in Statistical Science**, Colorado State University *(Aug 2020 - Aug 2022)*
+- **B.S. in Statistics**, Yanbian University *(Sep 2016 - Jun 2020)*
 
 ### 🔬 Research Interests
 - Computational statistics & bioinformatics  
