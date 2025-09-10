@@ -37,11 +37,12 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 > - Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)  
 > - Spatial reorganization indicates potential degeneration in AD pathology
 
-<img src="/files/Domain_Size_vs_R.png" alt="" style="width:100%;"/>
-  
-> -  
-> -  
-> - 
+<img src="/files/Domain_Size_vs_R.png" alt="Minimum domain size versus R that showing the threshold of 3% rule for spatial domain detection" style="width:100%;" />
+
+> - The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold.  
+> - R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains.  
+> - Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain.  
+
 
 ---
 
