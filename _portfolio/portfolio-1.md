@@ -11,9 +11,8 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ### 🧠 Project Summary
 
-- **Team Members**: Sara Elfring, Jingyi Chen, Shuoyuan Gao, Alexandra Schmalzel, Haowen Wu  
-- **Dataset**: NHANES (2009–2012)  
-- **Key Methods**: Linear regression, log transformation, interaction terms, model diagnostics  
+- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with thousands of spatial spots and gene expression counts measured across more than 15,000 genes  
+- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2  
 - **Main Finding**: Higher alcohol consumption is significantly associated with elevated systolic blood pressure, especially among younger adults.
 
 ---
