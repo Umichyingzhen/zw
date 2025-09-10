@@ -72,12 +72,30 @@ _China Everbright Bank, Changchun Branch_ — Changchun, China (September 2019 -
 - Learned the business models and daily operations of commercial banks; recommended appropriate wealth management products to potential clients based on their risk tolerance and investment needs  
 - Employed R to fit generalized and linear regression models for customer satisfaction and deposit analysis
   
-Teaching
+Research Experience
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
+**Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP**  
+_Department of Biostatistics at University of Michigan_ — Ann Arbor, MI (Nov 2024 - Dec 2024)
+- Deployed the stable Diffusion model and utilized LoRA to fine-tune the model to make the model generate customized chest X-ray images
+- Utilized the fine-tuned contrastive language-image pre-training (CLIP) model to achieve modest improvements in training accuracy and classify the test dataset  
+- Publish the whole research on GitHub https://github.com/xxm12345666/biostat625-group2-project.git
+
+**Research on Predictive Algorithms for Cardiovascular Disease**  
+_Summer Research Seminar, Supervisor: R. Todd Ogden, Columbia University_ — Remote (May 2023 - July 2023)
+- Utilized Principal Component Analysis (PCA) to identify relevant predictors and reduce dimensionality in complex datasets, implemented backward stepwise elimination to refine model features and prevent overfitting
+- Developed random forest and logistic regression models to assess CHD risk factors and aid in early detection  
+- Evaluated model performances based on confusion matrix and AUC-ROC curve values
+- Validated that the random forest model outperformed other models in categorizing high-dimensional data
+
+**Familial Influences on Radiation Effects in Mice**  
+_NASA Human Research Program, Weil Lab, Colorado State University_ — Fort Collins, CO (May 2022 – August 2022)
+- Designed and fitted a generalized linear mixed model for the analysis of the relationship among Modified Merriam-Focht classification and radiation groups
+- Detected the difference in radiation effects between γ-rays and HZE nuclei using emmeans command  
+- Achieved regression analysis for the odds of being vision impairing caused by gamma rays using R
+
+**Application of Nonlinear Programming to Heat Conduction Model**  
+_College of Science at Yanbian University_ — Yanji, China (August 2017 - October 2018)
+- Established a nonlinear programming model to determine optimal thickness of the second layer of the high temperature working clothes given predictors like work hours and environmental temperature
+- Obtained the function of temperature and material thickness based on Fourier heat law  
+- Introduced the simulated annealing algorithm to enhance optimization accuracy, considering convection and radiation factors
