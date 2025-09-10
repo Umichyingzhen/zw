@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Resume"
+title                    : "Yingzhen Wang | My Bio"
 title_separator          : "-"
 name                     : &name "Yingzhen Wang"
 description              : &description "MS in Biostatistics at University of Michigan"
