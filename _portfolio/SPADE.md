@@ -25,6 +25,8 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 [`Alzheimer’s disease and normal brain tissue gene expression information`](/files/binned_expr_matrix.zip)
 
+[`Spatial variance (SV) genes detection results (Likelihood Ratio Tests)`](/files/LRT_results.csv)
+
 ---
 
 ### 🔁 Baseline Model Comparison
