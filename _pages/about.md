@@ -30,8 +30,7 @@ I also have experience in applying advanced statistical methods to biomedical re
 - **Languages**: English (Advanced), Mandarin (Native)  
 
 ### 📬 Let’s Connect!
-- 📧 [yingzhen@umich.edu](mailto:yingzhen@umich.edu)
-- 📧 [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)  
+- 📧 [yingzhen@umich.edu](mailto:yingzhen@umich.edu) or [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/yingzhen-wang)  
 - 💻 [GitHub](https://github.com/Umichyingzhen)  
 
