@@ -11,9 +11,9 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ### 🧠 Project Summary
 
-- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with thousands of spatial spots and gene expression counts measured across more than 15,000 genes  
-- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2  
-- **Main Finding**: Higher alcohol consumption is significantly associated with elevated systolic blood pressure, especially among younger adults.
+- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with thousands of spatial spots and gene expression counts measured across more than 15,000 genes.  
+- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2.  
+- **Main Finding**: SPADE showed higher sensitivity for detecting localized spatial expression differences, while the Seurat+BASS framework captured broader domain-specific gene expression. About 37% of significant genes differed between methods, reflecting their complementary strengths and methodological differences.
 
 ---
 
