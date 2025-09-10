@@ -20,8 +20,10 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 ### 📊 Dataset Results Overview
 
 [`Binned Alzheimer’s disease coordinate information`](/files/ad_binned_coords.csv)
+
 [`Binned normal brain tissue coordinate information`](/files/normal_binned_coords.csv)
-['Alzheimer’s disease and normal brain tissue gene expression information'](/files/binned_expr_matrix.zip)
+
+[`Alzheimer’s disease and normal brain tissue gene expression information`](/files/binned_expr_matrix.zip)
 
 ---
 
