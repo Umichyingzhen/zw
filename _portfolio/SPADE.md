@@ -17,7 +17,7 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ---
 
-### 📊 Dataset Results Overview
+### 🧾 Dataset Results Overview
 
 [`Binned Alzheimer’s disease coordinate information`](/files/ad_binned_coords.csv)
 
@@ -29,7 +29,7 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ---
 
-### 🔁 Baseline Model Comparison
+### 🔁 Data Visualization Results
 
 <img src="/images/hypertension-baseline.jpg" alt="Baseline Model and Residuals" style="width:100%;"/>
 
