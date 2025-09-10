@@ -31,11 +31,17 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ### 🔁 Data Visualization Results
 
-<img src="/images/hypertension-baseline.jpg" alt="Baseline Model and Residuals" style="width:100%;"/>
+<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
+  
+> - Domain 4 and Domain 7 expanded in AD compared to WT (p < 0.05)  
+> - Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)  
+> - Spatial reorganization indicates potential degeneration in AD pathology
 
-> **Adjusted R²**: 0.1857  
-> - No log transformation used  
-> - 12+ drinks per year was not statistically significant (p = 0.864)
+<img src="/files/Domain_Size_vs_R.png" alt="" style="width:100%;"/>
+  
+> -  
+> -  
+> - 
 
 ---
 
