@@ -58,6 +58,19 @@ _Department of Computational Medicine & Bioinformatics at University of Michigan
 - Performed clustering and domain detection with the BASS package and integrated Seurat-based differential expression analysis to compare spatial domain-specific vs. localized gene expression  
 - Demonstrated that SPADE is good at detecting fine-scale localized differences, while Seurat capturing domain-level transcriptional changes, providing complementary insights into Alzheimer’s-related gene dysregulation
 - Built reproducible workflows on Great Lakes HPC with R&Python environments, executing Slurm jobs for the 3000*30000 expression matrix through VS Code
+
+**Graduate Research Assistant**  
+_Department of Biostatistics at University of Michigan_ — Ann Arbor, MI (May 2025 - Present)
+- Designed and implemented elliptical slice sampling algorithms in R for Bayesian parameter estimation, improving efficiency in posterior inference
+- Developed and validated a Multivariate Bayesian Shrinkage Prior (Mt-MBSP) model supporting mixed-type outcomes (continuous, binary, count) with Gibbs sampling  
+- Conducted extensive simulation studies comparing Bayesian CRD, Bayesian CRD with imputation, and OLS, evaluating predictive accuracy and convergence via Gelman-Rubin diagnostics
+- Applied Bayesian modeling frameworks to real and simulated datasets, generating reproducible analyses and visualizations that supported model validation and interpretation
+
+**Manager Assistant**  
+_China Everbright Bank, Changchun Branch_ — Changchun, China (September 2019 - November 2019)
+- Gathered and processed the monthly economic data of Jilin Province and the whole country since 2019 to understand the GDP drivers from the perspectives of fiscal policy and monetary policy
+- Learned the business models and daily operations of commercial banks; recommended appropriate wealth management products to potential clients based on their risk tolerance and investment needs  
+- Employed R to fit generalized and linear regression models for customer satisfaction and deposit analysis
   
 Teaching
 ======
