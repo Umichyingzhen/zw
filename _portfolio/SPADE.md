@@ -11,21 +11,15 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ### 🧠 Project Summary
 
-- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with thousands of spatial spots and gene expression counts measured across more than 15,000 genes.  
-- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2.  
+- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with 3541 spatial spots and 32285 gene expression counts measured.
+- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2; Capping algorithm for reducing computational burden.  
 - **Main Finding**: SPADE showed higher sensitivity for detecting localized spatial expression differences, while the Seurat+BASS framework captured broader domain-specific gene expression. About 37% of significant genes differed between methods, reflecting their complementary strengths and methodological differences.
 
 ---
 
-### 📊 Final Model Output
+### 📊 Dataset Results Overview
 
-<img src="/images/hypertension-final.jpg" alt="Final Model Output and Residual Histogram" style="width:100%;"/>
-
-> **Adjusted R²**: 0.185  
-> **Notable Results**:
-> - 12+ drinks per year → +0.060 log-units in SBP (p = 0.001)
-> - Each drink per day → +0.003 log-units (p < 0.001)
-> - Negative interaction with age
+[`Binned Alzheimer’s disease Coordinate Information`](/files/ad_binned_coords.csv)
 
 ---
 
