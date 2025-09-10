@@ -49,15 +49,15 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Research Expreience
+Work Expreience
 ======
 
-**Differential Analysis of Normal and Tumor Cancers in the Kidney**  
-_Institute of Biophysics, Chinese Academy of Sciences_ — Beijing, China (May 2023 – Aug 2023)
-
-- Cleaned 3,000+ raw kidney cancer samples in R; found WNK4 as most significant gene  
-- Used Cytoscape + edgeR for analysis and visualization across multiple algorithms  
-- Validated findings via qPCR and immunofluorescence on mouse bone marrow mesenchymal cells
+**Graduate Research Assistant**  
+_Department of Computational Medicine & Bioinformatics at University of Michigan_ — Ann Arbor, MI (May 2025 - July 2025)
+- Conducted spatial transcriptomics analysis on normal vs. Alzheimer’s mouse brains using SPADE, identifying over 13,000 spatially variable genes with high sensitivity to local expression heterogeneity
+- Performed clustering and domain detection with the BASS package and integrated Seurat-based differential expression analysis to compare spatial domain-specific vs. localized gene expression  
+- Demonstrated that SPADE is good at detecting fine-scale localized differences, while Seurat capturing domain-level transcriptional changes, providing complementary insights into Alzheimer’s-related gene dysregulation
+- Built reproducible workflows on Great Lakes HPC with R&Python environments, executing Slurm jobs for the 3000*30000 expression matrix through VS Code
   
 Teaching
 ======
