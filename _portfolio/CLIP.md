@@ -39,7 +39,7 @@ date: 2024-12-17
 
 ### 🧾 Results
 
-<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
+<img src="/files/CLIP_Results.png" style="width:100%;"/>
 
 
 ---
