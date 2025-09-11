@@ -50,31 +50,20 @@ date: 2024-12-17
 
 ---
 
-### 📈 Data Visualization Results
-
-<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
-  
-> - Domain 4 and Domain 7 expanded in AD compared to WT (p < 0.05)  
-> - Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)  
-> - Spatial reorganization indicates potential degeneration in AD pathology
-
-<img src="/files/Lhfp.png" alt="Conflict gene expression Lhfp" style="width:100%;"/>
-  
-> - Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression  
-> - Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7  
-> - Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions
-
-<img src="/files/Tuba1c.png" alt="Conflict gene expression Tuba1c" style="width:100%;"/>
-  
-> - Tuba1c shows generally low expression across both normal and AD tissues  
-> - A localized region in domain 3 of AD exhibits higher relative expression, detected as significant by SPADE  
-> - Cluster-based analysis did not classify Tuba1c as significant due to overall low and uniform expression  
-
-<img src="/files/Domain_Size_vs_R.png" alt="Minimum domain size versus R that showing the threshold of 3% rule for spatial domain detection" style="width:100%;" />
-
-> - The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold  
-> - R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains  
-> - Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain  
+### 📈 Setup
+ 
+- Domain 4 and Domain 7 expanded in AD compared to WT (p < 0.05)  
+- Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)
+- Spatial reorganization indicates potential degeneration in AD pathology  
+- Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression  
+- Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7  
+- Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions
+- Tuba1c shows generally low expression across both normal and AD tissues  
+- A localized region in domain 3 of AD exhibits higher relative expression, detected as significant by SPADE  
+- Cluster-based analysis did not classify Tuba1c as significant due to overall low and uniform expression  
+- The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold  
+- R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains  
+- Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain  
 
 ### 📋 Table Results
 
