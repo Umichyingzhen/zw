@@ -2,44 +2,45 @@
 title: "Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP"
 excerpt: " Explored large model techniques for classifying pediatric chest X-ray images into normal, bacterial pneumonia, and viral pneumonia categories. Using 5,856 radiographs and synthetic images generated via LoRA fine-tuning of a Stable Diffusion model, we addressed class imbalance and improved training accuracy. A fine-tuned CLIP model further demonstrated the potential of multimodal approaches for radiologic diagnosis of pneumonia."
 collection: portfolio
-date: 2025-12-17
+date: 2024-12-17
 ---
-
-<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
 
 ---
 
 ### 🧠 Project Summary
 
 - **Dataset**:  
-  - 5,856 pediatric chest X-ray images covering normal, bacterial pneumonia, and viral pneumonia.  
-  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance.  
+  - 5,856 pediatric chest X-ray images covering normal, bacterial pneumonia, and viral pneumonia  
+  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance  
 
 - **Key Methods**:  
-  - Applied large language model–based multimodal classification using CLIP.  
-  - LoRA fine-tuning of Stable Diffusion for synthetic data augmentation.  
-  - Fine-tuned CLIP model to evaluate classification across three pneumonia categories.  
+  - Applied large language model–based multimodal classification using CLIP 
+  - LoRA fine-tuning of Stable Diffusion for synthetic data augmentation
+  - Fine-tuned CLIP model to evaluate classification across three pneumonia categories
 
 - **Main Achievements**:  
-  - Improved training accuracy from **48.94% → 50.51%** with synthetic data augmentation.  
-  - Demonstrated feasibility of combining diffusion models and CLIP for radiologic diagnosis.  
-  - Identified limitations in generalization with test accuracy at **37.50%**, suggesting need for further optimization.
+  - Improved training accuracy from **48.94% → 50.51%** with synthetic data augmentation  
+  - Demonstrated feasibility of combining diffusion models and CLIP for radiologic diagnosis  
+  - Identified limitations in generalization with test accuracy at **37.50%**, suggesting need for further optimization
 
 ---
 
-### 🧾 Dataset Results Overview
+### 🧾 Model Implementation
 
-[`Binned Alzheimer’s disease coordinate information`](/files/ad_binned_coords.csv)
+- **Diffusion Model**:  
+  - Based on non-equilibrium thermodynamics, using forward and reverse diffusion to transform noisy data into realistic samples  
+  - Implemented with Stable Diffusion v2 using 865M U-Net as generator and OpenCLIP ViT-H/14 as encoder for 768×768px outputs  
+  - Fine-tuned with LoRA (LoRA_A and LoRA_B), reducing trainable parameters to ~1% and generating 1,000 synthetic images to address class imbalance
 
-[`Binned normal brain tissue coordinate information`](/files/normal_binned_coords.csv)
+- **Contrastive Language-Image Pre-training(CLIP)**:  
+  - Pre-trained by OpenAI in 2021 on large-scale image-text pairs, enabling models to match images with natural language descriptions  
+  - Used ViT-L/14 Transformer as image encoder and masked self-attention Transformer as text encoder, fine-tuned with LoRA for medical X-ray data  
+  - Fine-tuned model classified chest X-rays into three categories (normal, bacterial pneumonia, viral pneumonia) using prompt-based text inputs
 
-[`Alzheimer’s disease and normal brain tissue gene expression information`](/files/binned_expr_matrix.zip)
+### 🧾 Results
 
-[`Spatial variance (SV) genes detection results (Likelihood Ratio Tests)`](/files/LRT_results.csv)
+<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
 
-[`Significant SV genes only detected by SPADE (Likelihood Ratio Tests)`](/files/Sort_Genes_SPADE.csv)
-
-[`Significant SV genes only detected by Clustered Differential Expression (DE)`](/files/Sort_Genes_Domian.csv)
 
 ---
 
