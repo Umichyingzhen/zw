@@ -23,8 +23,9 @@ I’m passionate about computational statistics, data science, and biostatistica
 - Applied medical data analysis and statistical consulting  
 
 ### 💼 Experience
-I have worked on projects in spatial transcriptomics, Bayesian modeling, and cancer genomics.  
-I also have experience in applying advanced statistical methods to biomedical research and healthcare data.
+I have worked on projects in large language models, Bayesian modeling, and Alzheimer’s disease gene expression, including developing elliptical slice sampling algorithms and the Multivariate Bayesian Shrinkage Prior (Mt-MBSP) model for mixed-type outcomes.
+I also have experience in applying advanced statistical and machine learning methods to biomedical research and medical data, such as spatial transcriptomics analysis with SPADE and BASS, predictive algorithms for cardiovascular disease, radiation effect modeling in mice, and diffusion/CLIP models for medical imaging.
+I am skilled in building reproducible workflows on high-performance computing systems, integrating R, Python, Linux and Slurm, and conducting simulation studies to validate model performance.
 
 ### 🛠 Skills
 - **Programming**: R, Python, SQL, HTML, Linux (WSL), MATLAB   
