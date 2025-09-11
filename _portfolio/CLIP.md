@@ -73,14 +73,15 @@ date: 2024-12-17
 - **Shuoyuan Gao**  
   Code editing; Experiment Setup; Conclusion  
 
-**Github Link**: [Full Repo](https://github.com/xxm12345666/biostat625-group2-project)
+- **Github Link**: [Full Repo](https://github.com/xxm12345666/biostat625-group2-project)
 
 
 
 ---
 
-### 📎 Full Report
+### 📎 Documents
 
-👉 [Download Full Report (PDF)](/files/Application of SPADE and Seurat to Between Group Expression.pdf)
+👉 [Download Full Report (PDF)](/files/FINAL PROJECT.pdf)
+👉 [Download Full Slides (PDF)](/files/625 Presentation Slides.pdf)
 
 ---
