@@ -63,8 +63,8 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 | Method           | Total Genes | Significant Genes | Percent (%) |
 |------------------|-------------|-------------------|-------------|
-| Seurat           | 32,282      | 11,812            | 36.59       |
-| SPADE (Capping)  | 16,279      | 13,085            | 80.38       |
+| Seurat           | 32282       | 11812             | 36.59       |
+| SPADE (Capping)  | 16279       | 13085             | 80.38       |
 
 > - SPADE identified a higher number and proportion of significant genes compared to Seurat, despite processing fewer total input genes  
 > - The increased detection rate from SPADE suggests greater sensitivity to spatially varying signals in raw gene expression data  
