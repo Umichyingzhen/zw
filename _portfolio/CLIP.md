@@ -1,6 +1,6 @@
 ---
 title: "Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP"
-excerpt: " Explored large model techniques for classifying pediatric chest X-ray images into normal, bacterial pneumonia, and viral pneumonia categories. Using 5,856 radiographs and synthetic images generated via LoRA fine-tuning of a Stable Diffusion model, we addressed class imbalance and improved training accuracy. A fine-tuned CLIP model further demonstrated the potential of multimodal approaches for radiologic diagnosis of pneumonia."
+excerpt: " Explored large language model–based techniques for classifying pediatric chest X-ray images into normal, bacterial pneumonia, and viral pneumonia categories. Using 5,856 radiographs and synthetic images generated via LoRA fine-tuning of a Stable Diffusion model, we addressed class imbalance and improved training accuracy. A fine-tuned CLIP model further demonstrated the potential of multimodal approaches for radiologic diagnosis of pneumonia."
 collection: portfolio
 date: 2024-12-17
 ---
@@ -41,6 +41,12 @@ date: 2024-12-17
 
 <img src="/files/CLIP_Results.png" style="width:100%;"/>
 
+> - Training accuracy increased steadily across epochs, rising from 0.4894 at Epoch 1 to 0.5047 at Epoch 3, showing the model’s progressive learning of training features  
+> - Training recall improved from 0.4865 to 0.5056 across epochs, indicating better sensitivity to correctly identifying positive cases  
+> - The F1 score grew from 0.4725 at Epoch 1 to 0.4891 at Epoch 3, reflecting more balanced performance between precision and recall  
+> - Despite improvements during training, the final test accuracy reached only 0.375 with recall of 0.5, suggesting limited generalization on unseen data  
+> - The multimodal LLMs approach demonstrated promising classification outcomes, leveraging feature representations beyond traditional CNNs and improving interpretability
+> - However, limitations remain due to high computational cost of diffusion models, motivating future exploration of faster consistency models and reinforcement learning–based fine-tuning
 
 ---
 
