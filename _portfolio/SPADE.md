@@ -27,6 +27,10 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 [`Spatial variance (SV) genes detection results (Likelihood Ratio Tests)`](/files/LRT_results.csv)
 
+[`Significant SV genes only detected by SPADE (Likelihood Ratio Tests)`](/files/Sort_Genes_SPADE.csv)
+
+[`Significant SV genes only detected by Clustered Differential Expression (DE)`](/files/Sort_Genes_Domian.csv)
+
 ---
 
 ### 🔁 Data Visualization Results
@@ -36,6 +40,18 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 > - Domain 4 and Domain 7 expanded in AD compared to WT (p < 0.05)  
 > - Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)  
 > - Spatial reorganization indicates potential degeneration in AD pathology
+
+<img src="/files/Lhfp.png" alt="Conflict gene expression Lhfp" style="width:100%;"/>
+  
+> - Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression.  
+> - Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7.  
+> - Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions.
+
+<img src="/files/Tuba1c.png" alt="Conflict gene expression Tuba1c" style="width:100%;"/>
+  
+> - Tuba1c shows generally low expression across both normal and AD tissues  
+> - A localized region in domain 3 of AD exhibits higher relative expression, detected as significant by SPADE  
+> - Cluster-based analysis did not classify Tuba1c as significant due to overall low and uniform expression  
 
 <img src="/files/Domain_Size_vs_R.png" alt="Minimum domain size versus R that showing the threshold of 3% rule for spatial domain detection" style="width:100%;" />
 
