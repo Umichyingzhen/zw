@@ -5,13 +5,25 @@ collection: portfolio
 date: 2025-12-17
 ---
 
+<img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
+
 ---
 
 ### 🧠 Project Summary
 
-- **Dataset**: The dataset contains spatial transcriptomics profiles from Alzheimer’s disease and normal mouse brain sections, with 3541 spatial spots and 32285 gene expression counts measured.
-- **Key Methods**: SPADE for normalization and spatially variable gene detection; Seurat for preprocessing, clustering, and differential expression; BASS for multi-sample spatial domain alignment; visualization of spatial gene expression patterns using ggplot2; Capping algorithm for reducing computational burden.  
-- **Main Finding**: SPADE showed higher sensitivity for detecting localized spatial expression differences, while the Seurat+BASS framework captured broader domain-specific gene expression. About 37% of significant genes differed between methods, reflecting their complementary strengths and methodological differences.
+- **Dataset**:  
+  - 5,856 pediatric chest X-ray images covering normal, bacterial pneumonia, and viral pneumonia.  
+  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance.  
+
+- **Key Methods**:  
+  - Applied large language model–based multimodal classification using CLIP.  
+  - LoRA fine-tuning of Stable Diffusion for synthetic data augmentation.  
+  - Fine-tuned CLIP model to evaluate classification across three pneumonia categories.  
+
+- **Main Achievements**:  
+  - Improved training accuracy from **48.94% → 50.51%** with synthetic data augmentation.  
+  - Demonstrated feasibility of combining diffusion models and CLIP for radiologic diagnosis.  
+  - Identified limitations in generalization with test accuracy at **37.50%**, suggesting need for further optimization.
 
 ---
 
