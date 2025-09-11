@@ -11,7 +11,8 @@ date: 2024-12-17
 
 - **Dataset**:  
   - 5,856 pediatric chest X-ray images covering normal, bacterial pneumonia, and viral pneumonia  
-  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance  
+  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance
+  - Kaggle Chest X-ray dataset originates from Guangzhou Women and Children’s Medical Center
 
 - **Key Methods**:  
   - Applied large language model–based multimodal classification using CLIP 
@@ -50,39 +51,31 @@ date: 2024-12-17
 
 ---
 
-### 📈 Setup
+### 📋 Tools and Setup
  
-- Domain 4 and Domain 7 expanded in AD compared to WT (p < 0.05)  
-- Domain 3 and Domain 8 showed shrinkage or relocation (p < 0.05)
-- Spatial reorganization indicates potential degeneration in AD pathology  
-- Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression  
-- Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7  
-- Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions
-- Tuba1c shows generally low expression across both normal and AD tissues  
-- A localized region in domain 3 of AD exhibits higher relative expression, detected as significant by SPADE  
-- Cluster-based analysis did not classify Tuba1c as significant due to overall low and uniform expression  
-- The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold  
-- R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains  
-- Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain  
+- NVIDIA RTX 3090 GPU with 24GB memory was used to handle the computational requirements  
+- CUDA 12.2 Toolkit and PyTorch 2.5.1 provided the software environment for training  
+- Training was optimized with AdamW (batch size = 4, learning rate between 1e-4 and 5e-5)  
+- LoRA fine-tuning was applied for parameter efficiency (alpha = 16–32, dropout = 0.1)  
+- Experiments were run for 1–3 epochs, balancing fine-tuning performance and resource usage
+ 
+### ✨ Contribution
 
-### 📋 Table Results
+- **Xiaomeng Xu**  
+  Code editing; Abstract; Introduction  
 
-| Method           | Total Genes | Significant Genes | Percent (%) |
-|------------------|-------------|-------------------|-------------|
-| Clustered DE     | 32282       | 11812             | 36.59       |
-| SPADE (Capping)  | 16279       | 13085             | 80.38       |
+- **Wenfei Mao**  
+  Code editing; Diffusion Model; CLIP; Conclusion  
 
-> - SPADE identified a higher number and proportion of significant genes compared to Seurat, despite processing fewer total input genes  
-> - The increased detection rate from SPADE suggests greater sensitivity to spatially varying signals in raw gene expression data  
-> - Combining Seurat (for pre-filtering) and SPADE (for sensitivity) is preferred for robust evaluation of spatial data significance
+- **Yingzhen Wang**  
+  Code editing; Results; Diffusion Model  
 
-| Overlapping | Conflict | Only in Seurat | Only in SPADE |
-|-------------|----------|----------------|---------------|
-| 9639        | 5619     | 2173           | 3446          |
+- **Shuoyuan Gao**  
+  Code editing; Experiment Setup; Conclusion  
 
-> - 9,639 genes were identified as significant by both Seurat and SPADE  
-> - 5,619 genes show disagreement, with 2,173 detected only by Seurat and 3,446 only by SPADE  
-> - Nearly 37% of significant genes fall into the conflict category, highlighting methodological differences between Seurat and SPADE
+**Github Link**: [Full Repo](https://github.com/xxm12345666/biostat625-group2-project)
+
+
 
 ---
 
