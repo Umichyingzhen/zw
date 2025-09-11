@@ -33,7 +33,7 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 ---
 
-### 🔁 Data Visualization Results
+### 📈 Data Visualization Results
 
 <img src="/files/Spatial_Domain_Facet.png" alt="Comparison of Spatial Domain Distributions in AD versus Normal mouse brain" style="width:100%;"/>
   
@@ -43,9 +43,9 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 <img src="/files/Lhfp.png" alt="Conflict gene expression Lhfp" style="width:100%;"/>
   
-> - Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression.  
-> - Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7.  
-> - Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions.
+> - Domain 7 shows the lowest adjusted p-value in the DE analysis, highlighting significant differential expression  
+> - Cluster-based methods detect *Lhfp* as significant, consistent with higher relative expression intensity in Domain 7  
+> - Despite DE significance, *Lhfp* is not classified as an SV gene by SAPDE, likely due to similar relative expression intensity across multiple regions
 
 <img src="/files/Tuba1c.png" alt="Conflict gene expression Tuba1c" style="width:100%;"/>
   
@@ -55,10 +55,28 @@ This study applies spatial transcriptomics to analyze gene expression in Alzheim
 
 <img src="/files/Domain_Size_vs_R.png" alt="Minimum domain size versus R that showing the threshold of 3% rule for spatial domain detection" style="width:100%;" />
 
-> - The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold.  
-> - R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains.  
-> - Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain.  
+> - The maximum number of spatial domains is approximately 33, based on the minimum 3% cells per domain threshold  
+> - R values between 5 and 33 were evaluated, ensuring heterogeneity in gene expression is retained while avoiding noise from small domains  
+> - Domain size of 8 is the largest one that satisfies the baseline requirement with greater than 3 percent of cells per domain  
 
+### 📋 Table Results
+
+| Method           | Total Genes | Significant Genes | Percent (%) |
+|------------------|-------------|-------------------|-------------|
+| Seurat           | 32,282      | 11,812            | 36.59       |
+| SPADE (Capping)  | 16,279      | 13,085            | 80.38       |
+
+> - SPADE identified a higher number and proportion of significant genes compared to Seurat, despite processing fewer total input genes  
+> - The increased detection rate from SPADE suggests greater sensitivity to spatially varying signals in raw gene expression data  
+> - Combining Seurat (for pre-filtering) and SPADE (for sensitivity) is preferred for robust evaluation of spatial data significance
+
+| Overlapping | Conflict | Only in Seurat | Only in SPADE |
+|-------------|----------|----------------|---------------|
+| 9639        | 5619     | 2173           | 3446          |
+
+> - 9,639 genes were identified as significant by both Seurat and SPADE  
+> - 5,619 genes show disagreement, with 2,173 detected only by Seurat and 3,446 only by SPADE  
+> - Nearly 37% of significant genes fall into the conflict category, highlighting methodological differences between Seurat and SPADE
 
 ---
 
