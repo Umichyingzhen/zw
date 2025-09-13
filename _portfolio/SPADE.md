@@ -4,9 +4,7 @@ excerpt: " Investigated differential gene expression in Alzheimer’s disease mo
 collection: portfolio
 date: 2025-07-05
 ---
-
-This study applies spatial transcriptomics to analyze gene expression in Alzheimer’s disease mouse brains. SPADE and Seurat are used to identify spatially variable genes and to evaluate their relative sensitivity. The analysis highlights both overlapping and method-specific detections, showing that the two approaches provide complementary perspectives on spatial gene expression relevant to Alzheimer’s pathology.
-
+This is a research project conducted with Professor Cong Ma. Her contact information is congma@umich.edu, Department of Computational Medicine & Bioinformatics, Medical School, University of Michigan.
 ---
 
 ### 🧠 Project Summary
