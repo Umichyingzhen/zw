@@ -9,93 +9,94 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+教育经历
 ======
-**University of Michigan – Ann Arbor**  
-*Master of Science in Biostatistics | GPA: 3.860/4.0*
+**密歇根大学 – 安娜堡**  
+*生物统计学理学硕士 | GPA: 3.860/4.0*
 
-**Colorado State University - Fort Collins**  
-*Master of Applied Statistics in Statistical Science | GPA: 3.904/4.0*
+**科罗拉多州立大学 – 柯林斯堡**  
+*统计科学应用统计学硕士 | GPA: 3.904/4.0*
 
-**Yanbian University**  
-*Bachelor of Science in Statistics | AVG: 81.39/100*
+**延边大学**  
+*统计学理学学士 | 平均分: 81.39/100*
 
-Relevant Coursework
+相关课程
 ======
-* Algebra & Geometry
-* Probability & Distribution Theory
-* Ordinary Differential Equation
-* Stochastic Process
-* Multivariate Statistical Analysis
-* Machine Learning
-* Data Visualization Methods
-* Applied Bayesian Statistics
-* Quantitative Reasoning
-* Computing with Big Data
-* Analysis of Categorical Data
-* Biostatistics Inference
-* Clinical Trials
-* Theory and Application of Longitudinal Analysis
+* 代数与几何
+* 概率与分布理论
+* 常微分方程
+* 随机过程
+* 多元统计分析
+* 机器学习
+* 数据可视化方法
+* 应用贝叶斯统计
+* 定量推理
+* 大数据计算
+* 分类数据分析
+* 生物统计推断
+* 临床试验
+* 纵向分析理论与应用
 
-Technical Skills
+技能
 ======
-**Languages:** English (Advanced), Mandarin (Native)
+**语言:** 英语（高级）、中文（母语）
 
-**Software:** Excel (Advanced), Python (Advanced), R (Advanced), SQL (Intermediate), C++ (Intermediate), Linux (Intermediate), Matlab (Intermediate)
+**软件:** Excel（高级）、Python（高级）、R（高级）、SQL（中级）、C++（中级）、Linux（中级）、Matlab（中级）
 
-Publications
+论文期刊
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Work Expreience
+工作经历
 ======
 
-**Graduate Research Assistant**  
-_Department of Computational Medicine & Bioinformatics at University of Michigan_ — Ann Arbor, MI (May 2025 - July 2025)
-- Conducted spatial transcriptomics analysis on normal vs. Alzheimer’s mouse brains using SPADE, identifying over 13,000 spatially variable genes with high sensitivity to local expression heterogeneity
-- Performed clustering and domain detection with the BASS package and integrated Seurat-based differential expression analysis to compare spatial domain-specific vs. localized gene expression  
-- Demonstrated that SPADE is good at detecting fine-scale localized differences, while Seurat capturing domain-level transcriptional changes, providing complementary insights into Alzheimer’s-related gene dysregulation
-- Built reproducible workflows on Great Lakes HPC with R&Python environments, executing Slurm jobs for the 3000*30000 expression matrix through VS Code
+**研究助理**  
+_密歇根大学计算医学与生物信息学系_ — 美国安娜堡 (2025年5月 - 2025年7月)
+- 使用 SPADE 对正常与阿尔茨海默症小鼠脑进行空间转录组学分析，识别出超过13,000个空间可变基因，对局部表达异质性高度敏感
+- 利用 BASS 包进行聚类和领域检测，并结合 Seurat 差异表达分析，比较空间领域特异性与局部基因表达  
+- 结果表明，SPADE 擅长检测精细尺度的局部差异，而 Seurat 能捕捉领域水平的转录变化，为阿尔茨海默症相关基因失调提供互补见解
+- 在 Great Lakes 高性能计算平台上构建可复现工作流，使用 R 和 Python 环境，通过 VS Code 提交 Slurm 作业以处理 3000×30000 表达矩阵
 
-**Graduate Research Assistant**  
-_Department of Biostatistics at University of Michigan_ — Ann Arbor, MI (May 2025 - Present)
-- Designed and implemented elliptical slice sampling algorithms in R for Bayesian parameter estimation, improving efficiency in posterior inference
-- Developed and validated a Multivariate Bayesian Shrinkage Prior (Mt-MBSP) model supporting mixed-type outcomes (continuous, binary, count) with Gibbs sampling  
-- Conducted extensive simulation studies comparing Bayesian CRD, Bayesian CRD with imputation, and OLS, evaluating predictive accuracy and convergence via Gelman-Rubin diagnostics
-- Applied Bayesian modeling frameworks to real and simulated datasets, generating reproducible analyses and visualizations that supported model validation and interpretation
+**研究助理**  
+_密歇根大学生物统计学系_ — 美国安娜堡 (2025年5月 - 至今)
+- 在 R 中设计并实现椭圆切片采样算法用于贝叶斯参数估计，提高了后验推断的效率
+- 开发并验证了支持混合类型结局（连续、二元、计数）的多元贝叶斯收缩先验（Mt-MBSP）模型，并结合 Gibbs 采样  
+- 进行了大量模拟研究，比较贝叶斯 CRD、带插补的贝叶斯 CRD 以及 OLS，在预测精度和 Gelman-Rubin 收敛诊断方面进行评估
+- 将贝叶斯建模框架应用于真实和模拟数据，生成可复现的分析和可视化结果，用于模型验证和解释
 
-**Manager Assistant**  
-_China Everbright Bank, Changchun Branch_ — Changchun, China (September 2019 - November 2019)
-- Gathered and processed the monthly economic data of Jilin Province and the whole country since 2019 to understand the GDP drivers from the perspectives of fiscal policy and monetary policy
-- Learned the business models and daily operations of commercial banks; recommended appropriate wealth management products to potential clients based on their risk tolerance and investment needs  
-- Employed R to fit generalized and linear regression models for customer satisfaction and deposit analysis
+**经理助理**  
+_中国光大银行长春分行_ — 中国长春 (2019年9月 - 2019年11月)
+- 收集和处理2019年以来吉林省及全国的月度经济数据，从财政政策和货币政策角度分析 GDP 的驱动因素
+- 学习商业银行的业务模式和日常运作；根据客户的风险承受能力和投资需求，推荐合适的理财产品  
+- 使用 R 构建广义回归与线性回归模型，用于客户满意度和存款分析
   
-Research Experience
+研究经历
 ======
 
 **Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP**  
-_Department of Biostatistics at University of Michigan_ — Ann Arbor, MI (Nov 2024 - Dec 2024)
-- Deployed the stable Diffusion model and utilized LoRA to fine-tune the model to make the model generate customized chest X-ray images
-- Utilized the fine-tuned contrastive language-image pre-training (CLIP) model to achieve modest improvements in training accuracy and classify the test dataset  
-- Publish the whole research on GitHub https://github.com/xxm12345666/biostat625-group2-project.git
+_密歇根大学生物统计学系_ — 美国安娜堡 (2024年11月 - 2024年12月)
+- 部署稳定扩散模型，并利用 LoRA 微调模型，使其能够生成定制化胸部 X 光图像
+- 使用微调后的对比语言-图像预训练（CLIP）模型，提升训练精度并用于测试数据集分类  
+- 将研究成果发布在 GitHub https://github.com/xxm12345666/biostat625-group2-project.git
 
 **Research on Predictive Algorithms for Cardiovascular Disease**  
-_Summer Research Seminar, Supervisor: R. Todd Ogden, Columbia University_ — Remote (May 2023 - July 2023)
-- Utilized Principal Component Analysis (PCA) to identify relevant predictors and reduce dimensionality in complex datasets, implemented backward stepwise elimination to refine model features and prevent overfitting
-- Developed random forest and logistic regression models to assess CHD risk factors and aid in early detection  
-- Evaluated model performances based on confusion matrix and AUC-ROC curve values
-- Validated that the random forest model outperformed other models in categorizing high-dimensional data
+_夏季研究研讨会, 指导教师: R. Todd Ogden, 哥伦比亚大学_ — 远程 (2023年5月 - 2023年7月)
+- 使用主成分分析（PCA）识别相关预测因子并降低复杂数据的维度，通过反向逐步消除法精简模型特征以避免过拟合
+- 构建随机森林和逻辑回归模型，用于评估冠心病风险因素并辅助早期检测  
+- 基于混淆矩阵和 AUC-ROC 曲线值评估模型性能
+- 验证随机森林模型在高维数据分类中优于其他模型
 
 **Familial Influences on Radiation Effects in Mice**  
-_NASA Human Research Program, Weil Lab, Colorado State University_ — Fort Collins, CO (May 2022 – August 2022)
-- Designed and fitted a generalized linear mixed model for the analysis of the relationship among Modified Merriam-Focht classification and radiation groups
-- Detected the difference in radiation effects between γ-rays and HZE nuclei using emmeans command  
-- Achieved regression analysis for the odds of being vision impairing caused by gamma rays using R
+_NASA 人类研究项目, 科罗拉多州立大学 Weil 实验室_ — 美国柯林斯堡 (2022年5月 – 2022年8月)
+- 设计并拟合广义线性混合模型，用于分析修正的 Merriam-Focht 分类与辐射分组之间的关系
+- 使用 emmeans 命令检测 γ 射线和 HZE 原子核之间辐射效应的差异  
+- 使用 R 进行回归分析，评估 γ 射线导致视力损伤的发生概率
 
 **Application of Nonlinear Programming to Heat Conduction Model**  
-_College of Science at Yanbian University_ — Yanji, China (August 2017 - October 2018)
-- Established a nonlinear programming model to determine optimal thickness of the second layer of the high temperature working clothes given predictors like work hours and environmental temperature
-- Obtained the function of temperature and material thickness based on Fourier heat law  
-- Introduced the simulated annealing algorithm to enhance optimization accuracy, considering convection and radiation factors
+_延边大学理学院_ — 中国延吉 (2017年8月 - 2018年10月)
+- 建立非线性规划模型，用于确定在给定工作时间和环境温度等预测变量条件下，高温工作服第二层的最佳厚度
+- 基于傅里叶热传导定律得到温度与材料厚度的函数关系  
+- 引入模拟退火算法以提升优化精度，并考虑对流和辐射因素
+
