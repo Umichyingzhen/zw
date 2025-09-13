@@ -3,7 +3,7 @@ title: "Research on Bayesian Parameterization"
 excerpt: "This ongoing study explores Bayesian CRD methods with elliptical slice sampling for mixed-type responses. Preliminary simulations suggest stable inference and promising predictive performance compared to OLS, with extensions to external information and shrinkage priors under development."
 collection: portfolio
 ---
-
+This is a research I am still conducting with Professor Nicholas Henderson. His contact information is nchender@umich.edu, Department of Biostatistics, School of Public Health, University of Michigan.
 ---
 
 ### 📊 Project Summary
@@ -104,50 +104,36 @@ collection: portfolio
   - R packages: `MASS`, `mvtnorm`, `GIGrvg`, `MCMCpack`, `BayesLogit`, `pROC`, `PRROC`, `caret`, `ggplot2`, `pheatmap`, `loo`
 
 
-### 🧾 Results
+### 📑 Results
 
-<img src="/files/CLIP_Results.png" style="width:100%;"/>
+<img src="/files/p=3.png" style="width:100%;"/>
 
-> - Training accuracy increased steadily across epochs, rising from 0.4894 at Epoch 1 to 0.5047 at Epoch 3, showing the model’s progressive learning of training features  
-> - Training recall improved from 0.4865 to 0.5056 across epochs, indicating better sensitivity to correctly identifying positive cases  
-> - The F1 score grew from 0.4725 at Epoch 1 to 0.4891 at Epoch 3, reflecting more balanced performance between precision and recall  
-> - Despite improvements during training, the final test accuracy reached only 0.375 with recall of 0.5, suggesting limited generalization on unseen data  
-> - The multimodal LLMs approach demonstrated promising classification outcomes, leveraging feature representations beyond traditional CNNs and improving interpretability
-> - However, limitations remain due to high computational cost of diffusion models, motivating future exploration of faster consistency models and reinforcement learning–based fine-tuning
+> - The fitted comparison for CRD-impute at p = 3 shows that posterior mean estimates (red) align more closely with the 45° diagonal than in other settings, indicating improved predictive accuracy.  
+> - Linear regression (blue) captures broader variation but with higher scatter around the diagonal, suggesting larger variance and less stability compared to CRD.  
+> - Overall, CRD provides more consistent predictions around the true values, highlighting its robustness in moderate dimensions.  
 
----
+<img src="/files/densities of Beta.png" style="width:100%;"/>
 
-### 📋 Tools and Setup
- 
-- NVIDIA RTX 3090 GPU with 24GB memory was used to handle the computational requirements  
-- CUDA 12.2 Toolkit and PyTorch 2.5.1 provided the software environment for training  
-- Training was optimized with AdamW (batch size = 4, learning rate between 1e-4 and 5e-5)  
-- LoRA fine-tuning was applied for parameter efficiency (alpha = 16–32, dropout = 0.1)  
-- Experiments were run for 1–3 epochs, balancing fine-tuning performance and resource usage
- 
-### ✨ Contribution
+> - The posterior density plots for p = 5 illustrate distinct shrinkage behavior across coefficients beta1–beta5.  
+> - Beta1 and Beta2 remain centered near their true signals, while Beta3–Beta5 concentrate closer to zero, demonstrating effective shrinkage under the prior.  
+> - The spread of densities indicates uncertainty remains for weaker coefficients, but the framework still manages to separate strong from weak effects, validating the role of shrinkage priors.  
 
-- **Xiaomeng Xu**  
-  Code editing; Abstract; Introduction  
+**Simulation 1**
 
-- **Wenfei Mao**  
-  Code editing; Diffusion Model; CLIP; Conclusion  
+| n   | Method                | Discrepancy Type | Mean-Squared Error | Mean Gelman-Rubin |
+|-----|-----------------------|------------------|--------------------|-------------------|
+| 50  | Bayesian CRD          | spearman         | 1.1516             | 1.0692            |
+| 100 | Bayesian CRD          | spearman         | 1.1210             | 1.0906            |
+| 50  | Least Squares         | -                | 1.1584             | NaN               |
+| 100 | Least Squares         | -                | 1.1216             | NaN               |
+| 50  | Bayesian CRD (impute) | spearman         | 1.1867             | 1.0747            |
+| 100 | Bayesian CRD (impute) | spearman         | 1.1294             | 1.0747            |
+| 50  | Bayesian CRD (impute) | kendall          | 1.2045             | 1.0752            |
+| 100 | Bayesian CRD (impute) | kendall          | 1.0776             | 1.0768            |
 
-- **Yingzhen Wang**  
-  Code editing; Results; Diffusion Model  
-
-- **Shuoyuan Gao**  
-  Code editing; Experiment Setup; Conclusion  
-
-- **Github Link**: [Full Repo](https://github.com/xxm12345666/biostat625-group2-project)
-
-
-
----
-
-### 📎 Documents
-
-👉 [Download Full Report (PDF)](/files/FINAL PROJECT.pdf)
-👉 [Download Full Slides (PDF)](/files/625 Presentation Slides.pdf)
-
+--- 
+> - At n = 50, Bayesian CRD with Spearman discrepancy achieved MSE = 1.1516, slightly better than Least Squares (MSE = 1.1584), while maintaining PSRF ≈ 1.07 for convergence stability.  
+> - At n = 100, Bayesian CRD (Spearman) reached MSE = 1.1210, nearly identical to OLS (1.1216), but with reliable convergence diagnostics (PSRF ≈ 1.09), unlike OLS.  
+> - Bayesian CRD with imputation showed mixed performance: Spearman discrepancy increased error (MSE ≈ 1.18 at n=50), but Kendall discrepancy at n=100 gave the **lowest** error (MSE = 1.0776) across all methods, highlighting its adaptability.   
+> - Overall, while OLS matched Bayesian CRD at larger n, the Bayesian framework provided convergence assurance and superior performance with Kendall discrepancy at higher sample sizes.
 ---
