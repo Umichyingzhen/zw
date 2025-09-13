@@ -9,13 +9,13 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Yingzhen Wang | My Bio"
+title                    : "王英祯 | 主页"
 title_separator          : "-"
-name                     : &name "Yingzhen Wang"
-description              : &description "MS in Biostatistics at University of Michigan"
-url                      : https://umichyingzhen.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "王英祯"
+description              : &description "密歇根大学生物统计理学硕士"
+url                      : https://umichyingzhen.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "Umichyingzhen/Umichiyingzhen.github.io"
+repository               : "Umichyingzhen/zw"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -23,11 +23,11 @@ repository               : "Umichyingzhen/Umichiyingzhen.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Yingzhen Wang"
-  pronouns         : "He/His"  
-  bio              : "M.S. in Biostatistics at University of Michigan | M.A.S. in Statistical Science at Colorado State University | Enthusiast in computational statistics and data science"
-  location         : "Ann Arbor, MI"
-  employer         : "University of Michigan"
+  name             : "王英祯"
+  pronouns         : "男"  
+  bio              : "密歇根大学 生物统计学 硕士 | 科罗拉多州立大学 统计科学 硕士 | 计算统计与数据科学爱好者"
+  location         : "密歇根 安娜堡"
+  employer         : "密歇根大学"
   uri              : # URL
   email            : "yingzhen@umich.edu"  
 
