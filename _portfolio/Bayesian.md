@@ -93,12 +93,12 @@ collection: portfolio
   - **可视化**: 后验密度、系数相关性热图、误差箱线图  
 
 - **模拟设计**  
-  - **Sim 1**: 线性真实模型，`n = {50,100}`；比较 CRD（有/无插补）与 OLS  
-  - **Sim 1b**: 稀疏 beta（仅首个系数非零）以检验收缩效果  
-  - **Sim 2**: 外部 Weibull 模型估计 `beta_E`；将秩整合进 CRD；分析 `Dbar_i` 对 `Z` 的回归  
-  - **Sim 3**: 贝叶斯 Lasso 比较  
-  - **Sim 4**: 贝叶斯 Ridge（共轭）比较  
-  - **Sim 5**: 外部 beta 场景（`bext_1`, `bext_2`, `bext_3x10`, `first_only`, `mixed`）以测试泛化能力  
+  - **模拟 1**: 线性真实模型，`n = {50,100}`；比较 CRD（有/无插补）与 OLS  
+  - **模拟 1b**: 稀疏 beta（仅首个系数非零）以检验收缩效果  
+  - **模拟 2**: 外部 Weibull 模型估计 `beta_E`；将秩整合进 CRD；分析 `Dbar_i` 对 `Z` 的回归  
+  - **模拟 3**: 贝叶斯 Lasso 比较  
+  - **模拟 4**: 贝叶斯 Ridge（共轭）比较  
+  - **模拟 5**: 外部 beta 场景（`bext_1`, `bext_2`, `bext_3x10`, `first_only`, `mixed`）以测试泛化能力  
 
 - **默认设置与依赖库**  
   - 设置随机种子（如 970316）确保可复现性  
@@ -119,3 +119,23 @@ collection: portfolio
 > - 在 p = 5 的后验密度图显示，系数 beta1–beta5 呈现出明显的收缩行为差异。  
 > - Beta1 和 Beta2 保持在其真实信号附近，而 Beta3–Beta5 更集中于零附近，体现了先验的有效收缩。  
 > - 密度分布的宽度表明对较弱系数的不确定性依然存在，但框架依然能够区分强效与弱效，验证了收缩先验的作用。
+
+**模拟 1**
+
+| n   | Method                | Discrepancy Type | Mean-Squared Error | Mean Gelman-Rubin |
+|-----|-----------------------|------------------|--------------------|-------------------|
+| 50  | Bayesian CRD          | spearman         | 1.1516             | 1.0692            |
+| 100 | Bayesian CRD          | spearman         | 1.1210             | 1.0906            |
+| 50  | Least Squares         | -                | 1.1584             | NaN               |
+| 100 | Least Squares         | -                | 1.1216             | NaN               |
+| 50  | Bayesian CRD (impute) | spearman         | 1.1867             | 1.0747            |
+| 100 | Bayesian CRD (impute) | spearman         | 1.1294             | 1.0747            |
+| 50  | Bayesian CRD (impute) | kendall          | 1.2045             | 1.0752            |
+| 100 | Bayesian CRD (impute) | kendall          | 1.0776             | 1.0768            |
+
+--- 
+> - 在 n = 50 时，采用 Spearman 差异度的贝叶斯 CRD 达到 MSE = 1.1516，略优于最小二乘法 (MSE = 1.1584)，同时保持了稳定的收敛诊断 (PSRF ≈ 1.07)。  
+> - 在 n = 100 时，贝叶斯 CRD (Spearman) 的 MSE = 1.1210，几乎与 OLS (1.1216) 相同，但 CRD 的收敛诊断可靠 (PSRF ≈ 1.09)，而 OLS 没有提供相关收敛信息。  
+> - 带插补的贝叶斯 CRD 表现参差：在 n = 50 时，Spearman 差异度增加了误差 (MSE ≈ 1.18)；但在 n = 100 时，Kendall 差异度给出了 **最低** 误差 (MSE = 1.0776)，展现了该方法的适应性。  
+> - 总体来看，尽管在大样本时 OLS 与贝叶斯 CRD 表现相当，但贝叶斯框架在提供收敛保证方面更有优势，并在较大样本下结合 Kendall 差异度时表现出更优的预测性能。  
+
