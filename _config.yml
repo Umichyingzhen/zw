@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : &name "王英祯"
 description              : &description "密歇根大学生物统计理学硕士"
 url                      : https://umichyingzhen.github.io
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+baseurl                  : "/zw"
 repository               : "Umichyingzhen/zw"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
