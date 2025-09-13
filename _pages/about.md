@@ -7,34 +7,35 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I’m **Yingzhen Wang**, a graduate student in Biostatistics at the University of Michigan.  
-I’m passionate about computational statistics, data science, and biostatistical applications, with a strong background in statistical modeling, data visualization, and real-world meidcal data analysis.
+你好! 我是 **王英祯**，密歇根大学生物统计学研究生。  
+我热衷于计算统计学、数据科学和生物统计应用，具备扎实的统计建模、数据可视化和真实医学数据分析背景。  
 
-### 🎓 Education
-- **M.S. in Biostatistics**, University of Michigan *(August 2024 - Expected May 2026)*
-- **M.A.S. in Statistical Science**, Colorado State University *(Aug 2020 - Aug 2022)*
-- **B.S. in Statistics**, Yanbian University *(Sep 2016 - Jun 2020)*
+### 🎓 教育背景
+- **生物统计学硕士 (M.S.)**，密歇根大学 *(2024年8月 - 预计2026年5月)*  
+- **统计科学硕士 (M.A.S.)**，科罗拉多州立大学 *(2020年8月 - 2022年8月)*  
+- **统计学学士 (B.S.)**，延边大学 *(2016年9月 - 2020年6月)*  
 
-### 🔬 Research Interests
-- Computational statistics & bioinformatics  
-- Clinical trials 
-- Data visualization  
-- Differential gene expression detection  
-- Applied medical data analysis and statistical consulting  
+### 🔬 研究兴趣
+- 计算统计与生物信息学  
+- 临床试验  
+- 数据可视化  
+- 差异基因表达检测  
+- 医学数据分析与统计咨询  
 
-### 💼 Experience
-I have worked on projects in large language models, Bayesian modeling, and Alzheimer’s disease gene expression, including developing elliptical slice sampling algorithms and the Multivariate Bayesian Shrinkage Prior (Mt-MBSP) model for mixed-type outcomes.
-I also have experience in applying advanced statistical and machine learning methods to biomedical research and medical data, such as spatial transcriptomics analysis with SPADE and BASS, predictive algorithms for cardiovascular disease, radiation effect modeling in mice, and diffusion/CLIP models for medical imaging.
-I am skilled in building reproducible workflows on high-performance computing systems, integrating R, Python, Linux and Slurm, and conducting simulation studies to validate model performance.
+### 💼 经历
+我曾参与大语言模型、贝叶斯建模以及阿尔茨海默症基因表达相关的研究项目，包括开发椭圆切片采样算法，以及用于混合类型结局的多元贝叶斯收缩先验 (Mt-MBSP) 模型。  
+我也有将先进的统计和机器学习方法应用于生物医学研究和医学数据的经验，例如利用 SPADE 和 BASS 进行空间转录组学分析，开发心血管疾病预测算法，小鼠辐射效应建模，以及医学影像中的扩散模型和 CLIP 模型。  
+我擅长在高性能计算系统上构建可复现的工作流，整合 R、Python、Linux 和 Slurm，并通过模拟研究验证模型性能。  
 
-### 🛠 Skills
-- **Programming**: R, Python, SQL, HTML, Linux (WSL), MATLAB   
-- **Languages**: English (Advanced), Mandarin (Native)  
+### 🛠 技能
+- **编程**: R, Python, SQL, HTML, Linux (WSL), MATLAB  
+- **语言**: 英语（高级），中文（母语）  
 
-### 📬 Let’s Connect!
-- 📧 [yingzhen@umich.edu](mailto:yingzhen@umich.edu) or [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)  
+### 📬 联系方式
+- 📧 [yingzhen@umich.edu](mailto:yingzhen@umich.edu) 或 [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/yingzhen-wang)  
 - 💻 [GitHub](https://github.com/Umichyingzhen)  
 
-Feel free to explore my [Publications](/portfolio), [Projects](/Projects), [CV](/cv), or switch to [中文](/zw)!
+欢迎浏览我的 [论文发表](/portfolio)、[项目](/Projects)、[简历](/cv)，或切换至 [中文](/zw)!
+
 
