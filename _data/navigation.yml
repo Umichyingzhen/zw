@@ -9,7 +9,7 @@
 
 main:
   - title: "论文发表"
-    url: /publications/  
+    url: https://github.com/Umichyingzhen/zw/tree/4819a757a76d68ccf7ae8cd3520d91d1aaa5ad2d/_publications  
     
   - title: "项目与科研"
     url: /portfolio/
