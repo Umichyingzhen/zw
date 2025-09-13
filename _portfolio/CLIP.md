@@ -1,85 +1,84 @@
 ---
-title: "Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP"
-excerpt: " Explored large language model–based techniques for classifying pediatric chest X-ray images into normal, bacterial pneumonia, and viral pneumonia categories. Using 5,856 radiographs and synthetic images generated via LoRA fine-tuning of a Stable Diffusion model, we addressed class imbalance and improved training accuracy. A fine-tuned CLIP model further demonstrated the potential of multimodal approaches for radiologic diagnosis of pneumonia."
+title: "基于扩散模型与CLIP的肺炎患者病情分类研究"
+excerpt: "探索了基于大语言模型的技术，将儿童胸部X光图像分类为正常、细菌性肺炎和病毒性肺炎三类。利用 5856 张影像以及通过 Stable Diffusion 模型结合 LoRA 微调生成的合成图像，解决了类别不平衡问题并提高了训练精度。经过微调的 CLIP 模型进一步展示了多模态方法在肺炎影像诊断中的潜力。"
 collection: portfolio
 date: 2024-12-17
 ---
 
 ---
 
-### 🧠 Project Summary
+### 🧠 项目总结
 
-- **Dataset**:  
-  - 5,856 pediatric chest X-ray images covering normal, bacterial pneumonia, and viral pneumonia  
-  - Synthetic images generated via LoRA fine-tuning of Stable Diffusion to address class imbalance
-  - Kaggle Chest X-ray dataset originates from Guangzhou Women and Children’s Medical Center
+- **数据集**:  
+  - 5,856 张儿童胸部X光图像，涵盖正常、细菌性肺炎和病毒性肺炎  
+  - 通过对 Stable Diffusion 进行 LoRA 微调生成合成图像，以解决类别不平衡  
+  - Kaggle 胸片数据集来源于广州妇女儿童医疗中心  
 
-- **Key Methods**:  
-  - Applied large language model–based multimodal classification using CLIP 
-  - LoRA fine-tuning of Stable Diffusion for synthetic data augmentation
-  - Fine-tuned CLIP model to evaluate classification across three pneumonia categories
+- **关键方法**:  
+  - 应用基于大语言模型的多模态分类方法（CLIP）  
+  - 对 Stable Diffusion 进行 LoRA 微调，实现合成数据增强  
+  - 微调 CLIP 模型以评估三类肺炎的分类效果  
 
-- **Main Achievements**:  
-  - Improved training accuracy from **48.94% → 50.51%** with synthetic data augmentation  
-  - Demonstrated feasibility of combining diffusion models and CLIP for radiologic diagnosis  
-  - Identified limitations in generalization with test accuracy at **37.50%**, suggesting need for further optimization
+- **主要成果**:  
+  - 通过合成数据增强，将训练精度从 **48.94% → 50.51%** 提升  
+  - 展示了扩散模型与 CLIP 结合在影像诊断中的可行性  
+  - 识别出泛化能力的局限性，测试集精度仅为 **37.50%**，提示需要进一步优化  
 
 ---
 
-### 🧾 Model Implementation
+### 🧾 模型应用
 
-- **Diffusion Model**:  
-  - Based on non-equilibrium thermodynamics, using forward and reverse diffusion to transform noisy data into realistic samples  
-  - Implemented with Stable Diffusion v2 using 865M U-Net as generator and OpenCLIP ViT-H/14 as encoder for 768×768px outputs  
-  - Fine-tuned with LoRA (LoRA_A and LoRA_B), reducing trainable parameters to ~1% and generating 1,000 synthetic images to address class imbalance
+- **扩散模型**:  
+  - 基于非平衡热力学，利用正向与反向扩散将噪声数据转化为真实样本  
+  - 使用 Stable Diffusion v2 实现，865M 参数的 U-Net 作为生成器，OpenCLIP ViT-H/14 作为编码器，生成 768×768px 图像  
+  - 通过 LoRA (LoRA_A 和 LoRA_B) 微调，将可训练参数减少至约 1%，并生成 1,000 张合成图像以解决类别不平衡  
 
-- **Contrastive Language-Image Pre-training(CLIP)**:  
-  - Pre-trained by OpenAI in 2021 on large-scale image-text pairs, enabling models to match images with natural language descriptions  
-  - Used ViT-L/14 Transformer as image encoder and masked self-attention Transformer as text encoder, fine-tuned with LoRA for medical X-ray data  
-  - Fine-tuned model classified chest X-rays into three categories (normal, bacterial pneumonia, viral pneumonia) using prompt-based text inputs
+- **对比语言-图像预训练 (CLIP)**:  
+  - 由 OpenAI 于 2021 年基于大规模图文配对数据进行预训练，使模型能够将图像与自然语言描述相匹配  
+  - 使用 ViT-L/14 Transformer 作为图像编码器，使用带掩码自注意力的 Transformer 作为文本编码器，并通过 LoRA 在医学胸片数据上进行微调  
+  - 微调后的模型利用基于提示的文本输入，将胸片分为三类（正常、细菌性肺炎、病毒性肺炎）  
 
-### 🧾 Results
+### 🧾 结果
 
 <img src="/files/CLIP_Results.png" style="width:100%;"/>
 
-> - Training accuracy increased steadily across epochs, rising from 0.4894 at Epoch 1 to 0.5047 at Epoch 3, showing the model’s progressive learning of training features  
-> - Training recall improved from 0.4865 to 0.5056 across epochs, indicating better sensitivity to correctly identifying positive cases  
-> - The F1 score grew from 0.4725 at Epoch 1 to 0.4891 at Epoch 3, reflecting more balanced performance between precision and recall  
-> - Despite improvements during training, the final test accuracy reached only 0.375 with recall of 0.5, suggesting limited generalization on unseen data  
-> - The multimodal LLMs approach demonstrated promising classification outcomes, leveraging feature representations beyond traditional CNNs and improving interpretability
-> - However, limitations remain due to high computational cost of diffusion models, motivating future exploration of faster consistency models and reinforcement learning–based fine-tuning
+> - 训练精度在各个 epoch 中逐步提升，从第 1 轮的 0.4894 增加到第 3 轮的 0.5047，显示模型逐渐学习到训练特征  
+> - 训练召回率从 0.4865 提升到 0.5056，表明模型在正确识别阳性病例上的敏感性更好  
+> - F1 分数从第 1 轮的 0.4725 增加到第 3 轮的 0.4891，反映了精确率与召回率之间更平衡的表现  
+> - 尽管训练中有所改善，但最终测试集精度仅为 0.375，召回率为 0.5，提示模型在未见数据上的泛化能力有限  
+> - 多模态大模型方法展现了有前景的分类效果，利用超越传统 CNN 的特征表示，并提升了解释性  
+> - 然而，扩散模型的计算成本较高仍是限制因素，未来研究可探索更快的一致性模型以及基于强化学习的微调方法  
 
 ---
 
-### 📋 Tools and Setup
- 
-- NVIDIA RTX 3090 GPU with 24GB memory was used to handle the computational requirements  
-- CUDA 12.2 Toolkit and PyTorch 2.5.1 provided the software environment for training  
-- Training was optimized with AdamW (batch size = 4, learning rate between 1e-4 and 5e-5)  
-- LoRA fine-tuning was applied for parameter efficiency (alpha = 16–32, dropout = 0.1)  
-- Experiments were run for 1–3 epochs, balancing fine-tuning performance and resource usage
- 
-### ✨ Contribution
+### 📋 硬件与环境
 
-- **Xiaomeng Xu**  
-  Code editing; Abstract; Introduction  
+- 使用 NVIDIA RTX 3090 GPU (24GB 显存) 以满足计算需求  
+- CUDA 12.2 工具包与 PyTorch 2.5.1 提供训练环境  
+- 采用 AdamW 优化器（批量大小 = 4，学习率在 1e-4 至 5e-5 之间）  
+- 应用 LoRA 微调以提升参数效率（alpha = 16–32，dropout = 0.1）  
+- 实验运行 1–3 个 epoch，在性能与资源使用之间取得平衡  
 
-- **Wenfei Mao**  
-  Code editing; Diffusion Model; CLIP; Conclusion  
+### ✨ 贡献
 
-- **Yingzhen Wang**  
-  Code editing; Results; Diffusion Model  
+- **徐筱朦**  
+  代码编辑；摘要；引言  
 
-- **Shuoyuan Gao**  
-  Code editing; Experiment Setup; Conclusion  
+- **毛文飞**  
+  代码编辑；扩散模型；CLIP；结论  
+
+- **王英祯**  
+  代码编辑；结果；扩散模型  
+
+- **高硕远**  
+  代码编辑；实验设置；结论  
 
 - **Github Link**: [Full Repo](https://github.com/xxm12345666/biostat625-group2-project)
 
-
-
 ---
 
-### 📎 Documents
+
+### 📎 文件下载
 
 👉 [Download Full Report (PDF)](/files/FINAL PROJECT.pdf)
 👉 [Download Full Slides (PDF)](/files/625 Presentation Slides.pdf)
