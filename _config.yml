@@ -29,7 +29,7 @@ author:
   location         : "密歇根 安娜堡"
   employer         : "密歇根大学"
   uri              : # URL
-  电子邮件          : "yingzhen@umich.edu"  
+  email            : "yingzhen@umich.edu"  
 
   # Academic websites
   academia         : # URL
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  领英              : yingzhen-wang
+  Linkedln         : yingzhen-wang
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
