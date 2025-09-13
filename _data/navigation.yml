@@ -1,6 +1,6 @@
 main:
   - title: "论文发表"
-    url: zw/publications/  
+    url: /cnpublications/  
     
   - title: "项目与科研"
     url: zw/portfolio/
