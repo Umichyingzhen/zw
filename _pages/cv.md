@@ -75,26 +75,26 @@ _中国光大银行长春分行_ — 中国长春 (2019年9月 - 2019年11月)
 研究经历
 ======
 
-**Research on Pneumonia Patient Condition Classification Using Diffusion Models and CLIP**  
+**基于扩散模型与CLIP的肺炎患者病情分类研究**  
 _密歇根大学生物统计学系_ — 美国安娜堡 (2024年11月 - 2024年12月)
 - 部署稳定扩散模型，并利用 LoRA 微调模型，使其能够生成定制化胸部 X 光图像
 - 使用微调后的对比语言-图像预训练（CLIP）模型，提升训练精度并用于测试数据集分类  
 - 将研究成果发布在 GitHub https://github.com/xxm12345666/biostat625-group2-project.git
 
-**Research on Predictive Algorithms for Cardiovascular Disease**  
+**心血管疾病预测算法研究**  
 _夏季研究研讨会, 指导教师: R. Todd Ogden, 哥伦比亚大学_ — 远程 (2023年5月 - 2023年7月)
 - 使用主成分分析（PCA）识别相关预测因子并降低复杂数据的维度，通过反向逐步消除法精简模型特征以避免过拟合
 - 构建随机森林和逻辑回归模型，用于评估冠心病风险因素并辅助早期检测  
 - 基于混淆矩阵和 AUC-ROC 曲线值评估模型性能
 - 验证随机森林模型在高维数据分类中优于其他模型
 
-**Familial Influences on Radiation Effects in Mice**  
+**家族因素对小鼠辐射效应的影响研究**  
 _NASA 人类研究项目, 科罗拉多州立大学 Weil 实验室_ — 美国柯林斯堡 (2022年5月 – 2022年8月)
 - 设计并拟合广义线性混合模型，用于分析修正的 Merriam-Focht 分类与辐射分组之间的关系
 - 使用 emmeans 命令检测 γ 射线和 HZE 原子核之间辐射效应的差异  
 - 使用 R 进行回归分析，评估 γ 射线导致视力损伤的发生概率
 
-**Application of Nonlinear Programming to Heat Conduction Model**  
+**非线性规划在导热模型中的应用研究**  
 _延边大学理学院_ — 中国延吉 (2017年8月 - 2018年10月)
 - 建立非线性规划模型，用于确定在给定工作时间和环境温度等预测变量条件下，高温工作服第二层的最佳厚度
 - 基于傅里叶热传导定律得到温度与材料厚度的函数关系  
