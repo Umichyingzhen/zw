@@ -66,14 +66,14 @@ collection: portfolio
   - 潜在高斯随机效应 `U` 捕捉残差相关性；结果特异性的工作权重处理不同的似然  
   - 系数施加局部–全局参数 `(zeta, nu, tau)` 的收缩先验  
 
-- **Mt_MBSP (Gibbs) 采样器**  
+- **Mt_MBSP (Gibbs) 采样函数**  
   - **二元型**: Pólya–Gamma 增广；更新 `W`、潜在 `Y*`，然后更新系数 `B`  
   - **连续型**: 高斯工作模型，`W=1`  
   - **计数型**: 通过 Pólya–Gamma 的负二项模型；更新离散参数 `r_disp`  
   - 更新循环: `U | ...` (高斯)、`Σ | ...` (逆 Wishart)、局部尺度 `zeta` (GIG) 与 `nu` (Gamma)  
   - 生成预测抽样 `Bpred_samples`（存为 `Y_t`），用于后续 CRD  
 
-- **椭圆切片采样器 (CRD-impute)**  
+- **椭圆切片采样函数 (CRD-impute)**  
   - **参数块**: `theta = [beta_Z, beta_B, log(sigma^2), log(kappa), log(lambda)]`  
   - 对角协方差的高斯先验；区间角度采样，无需步长  
   - 使用来自 `fit$Bpred_samples`（或插补抽样）的滚动 `Bdraws` 将 CRD 与 Mt_MBSP 预测相结合  
