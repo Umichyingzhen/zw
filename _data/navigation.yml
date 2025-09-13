@@ -1,21 +1,12 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
-
 main:
   - title: "论文发表"
-    url: zw/_publications/  
+    url: zw/publications/  
     
   - title: "项目与科研"
-    url: zw/_portfolio/
+    url: zw/portfolio/
     
   - title: "个人简历"
-    url: zw/_pages/cv.md/
+    url: zw/pages/cv.md/
     
   - title: "English"
     url: /Umichyingzhen.github.io/
