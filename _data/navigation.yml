@@ -8,14 +8,14 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
+  - title: "论文发表"
     url: /publications/  
     
-  - title: "Projects"
+  - title: "项目与科研"
     url: /portfolio/
     
-  - title: "CV"
+  - title: "个人简历"
     url: /cv/
     
-  - title: "中文"
-    url: /zw/ # 需要新建一个repo名为zw
+  - title: "English"
+    url: /zw/
