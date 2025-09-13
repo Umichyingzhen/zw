@@ -36,5 +36,5 @@ I am skilled in building reproducible workflows on high-performance computing sy
 - 💼 [LinkedIn](https://www.linkedin.com/in/yingzhen-wang)  
 - 💻 [GitHub](https://github.com/Umichyingzhen)  
 
-Feel free to explore my [Projects](/Projects), [CV](/cv), or switch to [中文](/zw)!
+Feel free to explore my [Publications](/portfolio), [Projects](/Projects), [CV](/cv), or switch to [中文](/zw)!
 
