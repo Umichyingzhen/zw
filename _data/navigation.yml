@@ -9,13 +9,13 @@
 
 main:
   - title: "论文发表"
-    url: https://github.com/Umichyingzhen/zw/tree/4819a757a76d68ccf7ae8cd3520d91d1aaa5ad2d/_publications  
+    url: zw/_publications/  
     
   - title: "项目与科研"
-    url: https://github.com/Umichyingzhen/zw/tree/8bce5b88ec620fbbb9e86e6b38a057f3030d1b88/_portfolio
+    url: zw/_portfolio/
     
   - title: "个人简历"
-    url: https://github.com/Umichyingzhen/zw/blob/e31eee072488c009643d4ec54e390843c1952897/_pages/cv.md
+    url: zw/_pages/cv.md/
     
   - title: "English"
     url: /Umichyingzhen.github.io/
