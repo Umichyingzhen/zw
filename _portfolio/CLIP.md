@@ -80,7 +80,7 @@ date: 2024-12-17
 
 ### 📎 文件下载
 
-👉 [Download Full Report (PDF)](/files/FINAL PROJECT.pdf)
-👉 [Download Full Slides (PDF)](/files/625 Presentation Slides.pdf)
+👉 [下载研究报告 (PDF)](/files/FINAL PROJECT.pdf)
+👉 [下载幻灯片 (PDF)](/files/625 Presentation Slides.pdf)
 
 ---
