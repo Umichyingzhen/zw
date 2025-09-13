@@ -36,6 +36,6 @@ redirect_from:
 - 💼 [LinkedIn](https://www.linkedin.com/in/yingzhen-wang)  
 - 💻 [GitHub](https://github.com/Umichyingzhen)  
 
-欢迎浏览我的 [论文发表](/publications)、[项目](/portfolio)、[简历](/cv)，或切换至 [English](/zw)!
+欢迎浏览我的 [论文发表](/publications)、[项目](/portfolio)、[简历](/cv)，或切换至 [English](/Umichyingzhen.github.io)!
 
 
