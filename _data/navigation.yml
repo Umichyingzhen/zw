@@ -3,10 +3,10 @@ main:
     url: /publications/  
     
   - title: "项目与科研"
-    url: zw/portfolio/
+    url: /portfolio/
     
   - title: "个人简历"
-    url: zw/pages/cv.md/
+    url: /cv/
     
   - title: "English"
     url: /Umichyingzhen.github.io/
