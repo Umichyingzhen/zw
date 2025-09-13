@@ -4,7 +4,7 @@ excerpt: " Investigated differential gene expression in Alzheimer’s disease mo
 collection: portfolio
 date: 2025-07-05
 ---
-This is a research project conducted with Professor Cong Ma. Her contact information is congma@umich.edu, Department of Computational Medicine & Bioinformatics, Medical School, University of Michigan.
+This is a research project I conducted with Professor Cong Ma. Her contact information is congma@umich.edu, Department of Computational Medicine & Bioinformatics, Medical School, University of Michigan.
 ---
 
 ### 🧠 Project Summary
