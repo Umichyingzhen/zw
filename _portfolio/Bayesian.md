@@ -1,35 +1,35 @@
 ---
-title: "Research on Bayesian Parameterization"
-excerpt: "This ongoing study explores Bayesian CRD methods with elliptical slice sampling for mixed-type responses. Preliminary simulations suggest stable inference and promising predictive performance compared to OLS, with extensions to external information and shrinkage priors under development."
+title: "贝叶斯参数化研究"
+excerpt: "这项正在进行的研究探索了针对混合型反应的贝叶斯 CRD 方法与椭圆切片采样。初步模拟表明，与 OLS 相比，该方法在推断上更稳定，并在预测性能上表现出良好潜力，目前正在开发与外部信息和收缩先验相关的扩展。"
 collection: portfolio
 ---
 
-This is a research I am still conducting with Professor Nicholas Henderson. His contact information is nchender@umich.edu, Department of Biostatistics, School of Public Health, University of Michigan.
+这是我目前正在与 Nicholas Henderson 教授合作开展的研究。他的联系方式是 nchender@umich.edu，任职于密歇根大学公共卫生学院生物统计学系。
 
 ---
 
-### 📊 Project Summary
+### 📊 项目总结
 
-- **Dataset**:  
-  - Simulated datasets with continuous, binary, and count responses  
-  - External covariates generated from Weibull models for integration studies  
-  - Sample sizes considered: n = 50 and n = 100 across multiple settings  
+- **数据集**:  
+  - 含有连续型、二元型和计数型反应的模拟数据集  
+  - 外部协变量由 Weibull 模型生成，用于整合性研究  
+  - 考虑的样本量：n = 50 和 n = 100，涵盖多种设定  
 
-- **Key Methods**:  
-  - Developed Bayesian CRD framework with elliptical slice sampling for mixed-type responses  
-  - Incorporated external information through rank-based discrepancy measures (Spearman, Kendall)  
-  - Extended simulations with Bayesian Lasso and Ridge regression for comparison  
+- **关键方法**:  
+  - 开发了适用于混合型反应的贝叶斯 CRD 框架，并结合椭圆切片采样  
+  - 通过基于秩的差异度量（Spearman、Kendall）整合外部信息  
+  - 扩展模拟以比较贝叶斯 Lasso 和岭回归  
 
-- **Progress & Preliminary Achievements**:
+- **进展与初步成果**:
 
-  - Demonstrated stable posterior inference and convergence diagnostics  
+  - 展示了稳定的后验推断与收敛诊断  
     ```
     ## Step 2: Gelman-Rubin PSRF (p = 2)
     ## beta1   1.248638   1.903013
     ## beta2   1.039516   1.096078
     ```
   
-  - Achieved competitive mean-squared errors compared to OLS across multiple scenarios  
+  - 在多种场景下实现了与 OLS 相当的均方误差  
     ```
     Simulation 1 Results
     n    Method         Discrepancy   Mean-Squared Error
@@ -39,7 +39,7 @@ This is a research I am still conducting with Professor Nicholas Henderson. His 
     100  Least Squares  -             1.1216
     ```
 
-  - Showed flexibility in handling external information and shrinkage priors  
+  - 展示了在处理外部信息和收缩先验上的灵活性  
     ```
     Simulation 2 Results
     100  Bayesian CRD (impute)  kendall  1.6417
@@ -49,7 +49,7 @@ This is a research I am still conducting with Professor Nicholas Henderson. His 
     [1] 0.0021 0.1375 0.1523
     ```
 
-  - Identified limitations in generalization under certain coefficient structures, suggesting further refinement  
+  - 识别出在特定系数结构下泛化能力的局限性，提示需要进一步改进  
     ```
     Simulation 5 Results
     50 bext_first_only   MSE = 1.1121
@@ -59,83 +59,63 @@ This is a research I am still conducting with Professor Nicholas Henderson. His 
     ```
 ---
 
-### 🧩 Model Implementation and Design
+### 🧩 模型实现与设计
 
-- **Bayesian CRD for Mixed-Type Responses**  
-  - Multivariate regression with responses {continuous, binary, count}; covariates split into internal `Z` and external-driven features via predictive draws  
-  - Latent Gaussian random effects `U` capture residual correlation; outcome-specific working weights handle different likelihoods  
-  - Shrinkage prior on coefficients via local–global parameters `(zeta, nu, tau)`
+- **适用于混合型反应的贝叶斯 CRD**  
+  - 多元回归，反应包括 {连续型、二元型、计数型}；协变量分为内部 `Z` 与通过预测抽样获得的外部特征  
+  - 潜在高斯随机效应 `U` 捕捉残差相关性；结果特异性的工作权重处理不同的似然  
+  - 系数施加局部–全局参数 `(zeta, nu, tau)` 的收缩先验  
 
-- **Mt_MBSP (Gibbs) Sampler**  
-  - **Binary**: Pólya–Gamma augmentation; update `W`, latent `Y*`, then coefficients `B`  
-  - **Continuous**: Gaussian working model with `W=1`  
-  - **Count**: Negative-binomial via Pólya–Gamma; updates dispersion `r_disp`  
-  - Cycle updates: `U | ...` (Gaussian), `Σ | ...` (Inverse-Wishart), local scales `zeta` (GIG) and `nu` (Gamma)  
-  - Generate predictive draws `Bpred_samples` (stored as `Y_t`) for downstream CRD
+- **Mt_MBSP (Gibbs) 采样器**  
+  - **二元型**: Pólya–Gamma 增广；更新 `W`、潜在 `Y*`，然后更新系数 `B`  
+  - **连续型**: 高斯工作模型，`W=1`  
+  - **计数型**: 通过 Pólya–Gamma 的负二项模型；更新离散参数 `r_disp`  
+  - 更新循环: `U | ...` (高斯)、`Σ | ...` (逆 Wishart)、局部尺度 `zeta` (GIG) 与 `nu` (Gamma)  
+  - 生成预测抽样 `Bpred_samples`（存为 `Y_t`），用于后续 CRD  
 
-- **Elliptical Slice Sampler (CRD-impute)**  
-  - **Parameter block**: `theta = [beta_Z, beta_B, log(sigma^2), log(kappa), log(lambda)]`  
-  - Gaussian prior with diagonal covariance; bracketed angle sampling without step sizes  
-  - Uses rolling `Bdraws` from `fit$Bpred_samples` (or imputed draws) to couple CRD with Mt_MBSP predictions
+- **椭圆切片采样器 (CRD-impute)**  
+  - **参数块**: `theta = [beta_Z, beta_B, log(sigma^2), log(kappa), log(lambda)]`  
+  - 对角协方差的高斯先验；区间角度采样，无需步长  
+  - 使用来自 `fit$Bpred_samples`（或插补抽样）的滚动 `Bdraws` 将 CRD 与 Mt_MBSP 预测相结合  
 
-- **Discrepancy Measures**  
-  - **Spearman**: rank-based `W` from normalized ranks  
-  - **Kendall**: pairwise concordance/discordance construction in `ComputeWmatrix(...)` 
+- **差异度量**  
+  - **Spearman**: 基于归一化秩的 `W`  
+  - **Kendall**: 通过 `ComputeWmatrix(...)` 中的成对一致/不一致构造  
 
-- **Baselines & Shrinkage Variants**  
-  - **OLS** baseline for MSE comparison  
-  - **Bayesian Lasso**: per-coordinate local scales `lambda_j^2`, Gibbs updates, posterior means for `beta`  
-  - **Bayesian Ridge**: conjugate updates with closed-form posterior `(mu_n, V_n)` and Inverse-Gamma for `sigma^2`
+- **基线与收缩变体**  
+  - **OLS** 作为 MSE 比较基准  
+  - **贝叶斯 Lasso**: 每个坐标局部尺度 `lambda_j^2`，Gibbs 更新，后验均值估计 `beta`  
+  - **贝叶斯 Ridge**: 共轭更新，闭式后验 `(mu_n, V_n)`，并结合逆 Gamma 更新 `sigma^2`  
 
-- **Evaluation Protocols**  
-  - **Prediction**: MSE on new data; binary tasks use ROC/AUC and PR/AUPRC  
-  - **Convergence**: trace plots, ACF, cumulative means; Gelman–Rubin PSRF from split chains  
-  - **Visualization**: posterior densities, beta-correlation heatmaps, error boxplots
+- **评估方案**  
+  - **预测**: 新数据上的 MSE；二元任务使用 ROC/AUC 与 PR/AUPRC  
+  - **收敛性**: 跟踪图、ACF、累积均值；拆分链的 Gelman–Rubin PSRF  
+  - **可视化**: 后验密度、系数相关性热图、误差箱线图  
 
-- **Simulation Designs**  
-  - **Sim 1**: Linear truth with `n = {50,100}`; CRD (with/without imputation) vs OLS  
-  - **Sim 1b**: Sparse beta (only first coefficient nonzero) stress-tests shrinkage  
-  - **Sim 2**: External Weibull model estimates `beta_E`; integrates ranks into CRD; analyzes `Dbar_i` regression on `Z`  
-  - **Sim 3**: Bayesian Lasso comparison  
-  - **Sim 4**: Bayesian Ridge (conjugate) comparison  
-  - **Sim 5**: External beta scenarios (`bext_1`, `bext_2`, `bext_3x10`, `first_only`, `mixed`) to probe generalization
+- **模拟设计**  
+  - **Sim 1**: 线性真实模型，`n = {50,100}`；比较 CRD（有/无插补）与 OLS  
+  - **Sim 1b**: 稀疏 beta（仅首个系数非零）以检验收缩效果  
+  - **Sim 2**: 外部 Weibull 模型估计 `beta_E`；将秩整合进 CRD；分析 `Dbar_i` 对 `Z` 的回归  
+  - **Sim 3**: 贝叶斯 Lasso 比较  
+  - **Sim 4**: 贝叶斯 Ridge（共轭）比较  
+  - **Sim 5**: 外部 beta 场景（`bext_1`, `bext_2`, `bext_3x10`, `first_only`, `mixed`）以测试泛化能力  
 
-- **Default Settings & Libraries**  
-  - Seeds (e.g., 970316) for reproducibility  
-  - `Mt_MBSP`: `niter=500`, `burn=100`; **CRD-ESS**: `T=1000`; typical `kappa=1`, `sigma0_sq=3`, `sigma_kappa_sq=3`, `sigma_l_sq=1`; small \( \nu \) (e.g., 0.1); scenario-specific \( \eta \)  
-  - R packages: `MASS`, `mvtnorm`, `GIGrvg`, `MCMCpack`, `BayesLogit`, `pROC`, `PRROC`, `caret`, `ggplot2`, `pheatmap`, `loo`
+- **默认设置与依赖库**  
+  - 设置随机种子（如 970316）确保可复现性  
+  - `Mt_MBSP`: `niter=500`, `burn=100`; **CRD-ESS**: `T=1000`; 常用参数 `kappa=1`, `sigma0_sq=3`, `sigma_kappa_sq=3`, `sigma_l_sq=1`; 小 \( \nu \)（如 0.1）；场景特定的 \( \eta \)  
+  - R 包: `MASS`, `mvtnorm`, `GIGrvg`, `MCMCpack`, `BayesLogit`, `pROC`, `PRROC`, `caret`, `ggplot2`, `pheatmap`, `loo`
 
 
-### 📑 Results
+### 📑 结果
 
 <img src="/files/p=3.png" style="width:100%;"/>
 
-> - The fitted comparison for CRD-impute at p = 3 shows that posterior mean estimates (red) align more closely with the 45° diagonal than in other settings, indicating improved predictive accuracy.  
-> - Linear regression (blue) captures broader variation but with higher scatter around the diagonal, suggesting larger variance and less stability compared to CRD.  
-> - Overall, CRD provides more consistent predictions around the true values, highlighting its robustness in moderate dimensions.  
+> - 在 p = 3 的 CRD-impute 对比中，后验均值估计（红色）比其他设定更贴近 45° 对角线，表明预测精度有所提高。  
+> - 线性回归（蓝色）虽然捕捉了更广泛的变化，但在对角线周围的散点更大，说明方差更高且稳定性较差。  
+> - 总体而言，CRD 在真实值附近提供了更一致的预测，凸显其在中等维度下的稳健性。  
 
 <img src="/files/densities of Beta.png" style="width:100%;"/>
 
-> - The posterior density plots for p = 5 illustrate distinct shrinkage behavior across coefficients beta1–beta5.  
-> - Beta1 and Beta2 remain centered near their true signals, while Beta3–Beta5 concentrate closer to zero, demonstrating effective shrinkage under the prior.  
-> - The spread of densities indicates uncertainty remains for weaker coefficients, but the framework still manages to separate strong from weak effects, validating the role of shrinkage priors.  
-
-**Simulation 1**
-
-| n   | Method                | Discrepancy Type | Mean-Squared Error | Mean Gelman-Rubin |
-|-----|-----------------------|------------------|--------------------|-------------------|
-| 50  | Bayesian CRD          | spearman         | 1.1516             | 1.0692            |
-| 100 | Bayesian CRD          | spearman         | 1.1210             | 1.0906            |
-| 50  | Least Squares         | -                | 1.1584             | NaN               |
-| 100 | Least Squares         | -                | 1.1216             | NaN               |
-| 50  | Bayesian CRD (impute) | spearman         | 1.1867             | 1.0747            |
-| 100 | Bayesian CRD (impute) | spearman         | 1.1294             | 1.0747            |
-| 50  | Bayesian CRD (impute) | kendall          | 1.2045             | 1.0752            |
-| 100 | Bayesian CRD (impute) | kendall          | 1.0776             | 1.0768            |
-
---- 
-> - At n = 50, Bayesian CRD with Spearman discrepancy achieved MSE = 1.1516, slightly better than Least Squares (MSE = 1.1584), while maintaining PSRF ≈ 1.07 for convergence stability.  
-> - At n = 100, Bayesian CRD (Spearman) reached MSE = 1.1210, nearly identical to OLS (1.1216), but with reliable convergence diagnostics (PSRF ≈ 1.09), unlike OLS.  
-> - Bayesian CRD with imputation showed mixed performance: Spearman discrepancy increased error (MSE ≈ 1.18 at n=50), but Kendall discrepancy at n=100 gave the **lowest** error (MSE = 1.0776) across all methods, highlighting its adaptability.   
-> - Overall, while OLS matched Bayesian CRD at larger n, the Bayesian framework provided convergence assurance and superior performance with Kendall discrepancy at higher sample sizes.
----
+> - 在 p = 5 的后验密度图显示，系数 beta1–beta5 呈现出明显的收缩行为差异。  
+> - Beta1 和 Beta2 保持在其真实信号附近，而 Beta3–Beta5 更集中于零附近，体现了先验的有效收缩。  
+> - 密度分布的宽度表明对较弱系数的不确定性依然存在，但框架依然能够区分强效与弱效，验证了收缩先验的作用。
