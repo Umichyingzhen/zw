@@ -3,7 +3,9 @@ title: "Research on Bayesian Parameterization"
 excerpt: "This ongoing study explores Bayesian CRD methods with elliptical slice sampling for mixed-type responses. Preliminary simulations suggest stable inference and promising predictive performance compared to OLS, with extensions to external information and shrinkage priors under development."
 collection: portfolio
 ---
+
 This is a research I am still conducting with Professor Nicholas Henderson. His contact information is nchender@umich.edu, Department of Biostatistics, School of Public Health, University of Michigan.
+
 ---
 
 ### 📊 Project Summary
