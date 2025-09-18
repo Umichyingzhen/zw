@@ -1,4 +1,4 @@
-**---
+---
 title: "MLST: 统计回归分析R包"
 excerpt: "开发了一个 R 包，用于计算回归统计量和检验结果，包括 残差标准误、判定系数、调整判定系数、F 检验 和 T 检验。"
 collection: portfolio
