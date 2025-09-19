@@ -32,7 +32,8 @@ redirect_from:
 - **语言**: 英语（高级），中文（母语）  
 
 ### 📬 联系方式
-- 📧 [yingzhen@umich.edu](mailto:yingzhen@umich.edu) 或 [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)  
+- 📧 [yingzhen19970316@gmail.com](mailto:yingzhen19970316@gmail.com)
+- ☎️ 15948033357  
 - 💼 [LinkedIn](https://www.linkedin.com/in/yingzhen-wang)  
 - 💻 [GitHub](https://github.com/Umichyingzhen)  
 
